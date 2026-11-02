@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | LearnHub</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="admin">
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="/">LearnHub</a>
+            <nav class="site-nav" aria-label="Account"><button id="logout" class="btn small secondary" type="button">Log out</button></nav>
+        </div>
+    </header>
+    <main class="dash">
+        <div class="wrap">
+            <div class="banner"><h1 id="welcome">Admin</h1><p>Manage users and read messages</p></div>
+            <div class="tiles">
+                <div class="tile"><b id="tile-total">0</b><span>Total users</span></div>
+                <div class="tile"><b id="tile-students">0</b><span>Students</span></div>
+                <div class="tile"><b id="tile-tutors">0</b><span>Tutors</span></div>
+                <div class="tile"><b id="tile-messages">0</b><span>Messages</span></div>
+            </div>
+            <div class="panel">
+                <h2>Users</h2>
+                <p class="msg" id="admin-msg" role="alert"></p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Role</th><th>Status</th><th>Joined</th><th></th></tr></thead>
+                        <tbody id="users-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Contact messages</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Message</th></tr></thead>
+                        <tbody id="messages-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>

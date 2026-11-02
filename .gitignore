@@ -1,0 +1,30 @@
+#Visual Studio Code
+.vscode/
+.vs/
+
+#Environment files
+.env
+*.env/
+
+#Node modules
+node_modules/
+
+#Log files
+*.log
+
+#Compiled source #
+dist/
+
+#Virtual environment
+.venv/
+.venv/
+
+#Python
+__pycache__/
+*.pyc
+*.py[cod]
+*.pyd
+
+.pytest_cache/
+.idea/
+*.sqlite3

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in | LearnHub</title>
+    <meta name="description" content="Log in to your LearnHub account.">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="auth-bg">
+    
+    <main class="auth">
+        <header class="site-header">
+            <div class="wrap">
+                <a class="brand" href="/">LearnHub</a>
+                <nav class="site-nav" aria-label="Main">
+                    <a class="hide-sm" href="/#why">Why LearnHub</a>
+                    <a class="hide-sm" href="/#reviews">Reviews</a>
+                    <a class="hide-sm" href="/#contact">Contact</a>
+                    <a href="/login">Log in</a>
+                    <a class="btn small" href="/register">Register</a>
+                </nav>
+            </div>
+        </header>
+        <div class="wrap">
+            <form id="login-form" class="card narrow" novalidate>
+                <div class="top"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></div><h1>Welcome back</h1><p>Log in to your LearnHub account</p></div>
+                <label for="email">Email</label>
+                <input id="email" type="email" autocomplete="username" maxlength="254" required>
+                <label for="password">Password</label>
+                <input id="password" type="password" autocomplete="current-password" maxlength="200" required>
+                <button class="btn block" type="submit">Log in</button>
+                <p class="msg" role="alert"></p>
+                <p class="hint center">No account yet? <a href="/register">Register</a><br>Forgot your password? <a href="/#contact">Contact us</a> and we'll reset it.</p>
+            </form>
+        </div>
+    </main>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="LearnHub System Architecture" id="thm7anFaRJDawAbDynmn">
+    <mxGraphModel dx="1414" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Student" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Tutor" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Admin" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Public Website Home • About • Services Testimonials • Contact" vertex="1">
+          <mxGeometry height="90" width="190" x="230" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Authentication Register • Login Password Reset" vertex="1">
+          <mxGeometry height="80" width="190" x="230" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Student Dashboard Profile • Bookings Assignments • Payments Messages • Reviews" vertex="1">
+          <mxGeometry height="120" width="210" x="470" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Tutor Dashboard Availability • Sessions Student Requests Earnings • Messages" vertex="1">
+          <mxGeometry height="110" width="210" x="470" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Admin Dashboard Users • Services • Bookings Payments • Content Reports" vertex="1">
+          <mxGeometry height="100" width="210" x="470" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Backend API / Business Logic User Management • Booking Engine Assignment Workflow • Payments Notifications • Reviews" vertex="1">
+          <mxGeometry height="170" width="240" x="760" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-10" parent="1" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Azure Static Web Apps Frontend Hosting" vertex="1">
+          <mxGeometry height="70" width="190" x="230" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Database Azure SQL / PostgreSQL Users • Roles • Services Bookings • Assignments Payments • Messages • Reviews" vertex="1">
+          <mxGeometry height="150" width="230" x="1080" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-12" parent="1" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="File Storage Azure Blob Storage Assignment uploads Study material" vertex="1">
+          <mxGeometry height="90" width="230" x="1080" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="External Services Email/SMS • Payment Gateway Video/Meeting Platform" vertex="1">
+          <mxGeometry height="90" width="230" x="1080" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-14" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-1" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-15" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-2" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-16" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-3" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-17" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-4" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-18" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-5" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-19" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-5" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-20" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-5" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-21" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-6" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-22" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-7" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-23" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-8" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-24" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-4" style="endArrow=block;html=1;rounded=0;strokeColor=default;" target="-vEfPsmU2hhIxT6u_dED-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-25" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-10" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-26" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-9" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-27" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-9" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-vEfPsmU2hhIxT6u_dED-28" edge="1" parent="1" source="-vEfPsmU2hhIxT6u_dED-9" style="endArrow=block;html=1;rounded=0;" target="-vEfPsmU2hhIxT6u_dED-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

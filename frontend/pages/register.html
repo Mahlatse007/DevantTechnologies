@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | LearnHub</title>
+    <meta name="description" content="Create your LearnHub account.">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="auth-bg">
+    
+    <main class="auth">
+        <header class="site-header">
+            <div class="wrap">
+                <a class="brand" href="/">LearnHub</a>
+                <nav class="site-nav" aria-label="Main">
+                    <a class="hide-sm" href="/#why">Why LearnHub</a>
+                    <a class="hide-sm" href="/#reviews">Reviews</a>
+                    <a class="hide-sm" href="/#contact">Contact</a>
+                    <a href="/login">Log in</a>
+                    <a class="btn small" href="/register">Register</a>
+                </nav>
+            </div>
+        </header>
+        <div class="wrap">
+            <form id="register-form" class="card" novalidate>
+                <div class="top"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6M22 11h-6" /></svg></div><h1>Create your account</h1><p>It only takes a minute</p></div>
+                <div class="form-grid">
+                    <div><label for="first_name">First name</label><input id="first_name" type="text" maxlength="60" autocomplete="given-name" required></div>
+                    <div><label for="last_name">Last name</label><input id="last_name" type="text" maxlength="60" autocomplete="family-name" required></div>
+                    <div class="full"><label for="email">Email</label><input id="email" type="email" maxlength="254" autocomplete="email" required></div>
+                    <div><label for="username">Username</label><input id="username" type="text" pattern="[A-Za-z0-9_.\-]{3,30}" autocomplete="username" required><p class="hint">3 to 30 letters, numbers, _ . or -</p></div>
+                    <div><label for="contact_number">Contact number</label><input id="contact_number" type="tel" pattern="\+?[0-9 ]{9,18}" autocomplete="tel" required></div>
+                    <div class="full">
+                        <label for="role">I am a</label>
+                        <select id="role" required><option value="" selected disabled>Choose one</option><option value="Student">Student or learner</option><option value="Tutor">Tutor</option></select>
+                    </div>
+                    <div><label for="password">Password</label><input id="password" type="password" minlength="10" maxlength="72" autocomplete="new-password" required><p class="hint">At least 10 characters, with letters and numbers</p></div>
+                    <div><label for="confirm">Confirm password</label><input id="confirm" type="password" minlength="10" maxlength="72" autocomplete="new-password" required></div>
+                </div>
+                <label class="check" for="consent">
+                    <input id="consent" type="checkbox" required>
+                    <span>I have read the <a href="/privacy" target="_blank" rel="noopener">privacy policy</a> and <a href="/terms" target="_blank" rel="noopener">terms</a>. I am 18 or older, or my parent or guardian has given permission.</span>
+                </label>
+                <button class="btn block" type="submit">Create account</button>
+                <p class="msg" role="alert"></p>
+                <p class="hint center">Already registered? <a href="/login">Log in</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
