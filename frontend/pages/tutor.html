@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Tutor dashboard | LearnHub</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body data-page="tutor">
+    <main class="dash">
+      <header class="site-header">
+        <div class="wrap">
+          <a class="brand" href="/learnhub">LearnHub</a>
+          <nav class="site-nav" aria-label="Account">
+            <button id="logout" class="btn small secondary" type="button">
+              Log out
+            </button>
+          </nav>
+        </div>
+      </header>
+      <div class="wrap">
+        <div class="banner">
+          <h1 id="welcome">Welcome</h1>
+          <p>Set your subjects and the times you are available</p>
+        </div>
+
+        <div class="tiles">
+          <div class="tile">
+            <b id="tile-booked">0</b><span>Booked lessons</span>
+          </div>
+          <div class="tile"><b id="tile-open">0</b><span>Open times</span></div>
+          <div class="tile">
+            <b id="tile-subjects">0</b><span>Subjects you teach</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Subjects I teach</h2>
+          <p class="muted">
+            Students find you through these. Choose at least one.
+          </p>
+          <div id="subject-checks" class="checks"></div>
+          <button id="save-subjects" class="btn small" type="button">
+            Save subjects
+          </button>
+          <p class="msg" id="subjects-msg" role="alert"></p>
+        </div>
+
+        <div class="panel">
+          <h2>Add availability</h2>
+          <p class="muted">
+            Each time is a one-hour lesson. Times are shown in your device's
+            time zone.
+          </p>
+          <form id="slot-form" class="inline-form" novalidate>
+            <div>
+              <label for="slot-when">Date and start time</label
+              ><input
+                id="slot-when"
+                type="datetime-local"
+                step="900"
+                required
+              />
+            </div>
+            <div>
+              <label for="slot-repeat">Repeat</label>
+              <select id="slot-repeat">
+                <option value="1">Just once</option>
+                <option value="4">Weekly for 4 weeks</option>
+                <option value="8">Weekly for 8 weeks</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Add time</button>
+          </form>
+          <p class="msg" id="slot-msg" role="alert"></p>
+        </div>
+
+        <div class="panel">
+          <h2>My schedule</h2>
+          <p class="msg" id="schedule-msg" role="alert"></p>
+          <div id="schedule" class="lessons"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/static/script.js" defer></script>
+    <script src="/static/tutor.js" defer></script>
+  </body>
+</html>

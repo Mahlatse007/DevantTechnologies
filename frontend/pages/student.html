@@ -1,25 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
     <title>Student dashboard | LearnHub</title>
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body data-page="student">
-    <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="/">LearnHub</a>
-            <nav class="site-nav" aria-label="Account"><button id="logout" class="btn small secondary" type="button">Log out</button></nav>
-        </div>
-    </header>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body data-page="student">
     <main class="dash">
+      <header class="site-header">
         <div class="wrap">
-            <div class="banner"><h1 id="welcome">Welcome</h1><p>Your learning space</p></div>
-            <div class="panel"><div class="panel-row"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div><div><h2>Your lessons</h2><p class="muted">Booking and lesson tracking are coming soon. For now, message us from the contact form on the home page and we'll arrange your first session.</p></div></div></div>
+          <a class="brand" href="/learnhub">LearnHub</a>
+          <nav class="site-nav" aria-label="Account">
+            <button id="logout" class="btn small secondary" type="button">
+              Log out
+            </button>
+          </nav>
         </div>
+      </header>
+      <div class="wrap">
+        <div class="banner">
+          <h1 id="welcome">Welcome</h1>
+          <p>Book a lesson in three quick steps</p>
+        </div>
+
+        <div class="panel">
+          <h2>Book a lesson</h2>
+          <p class="msg" id="book-msg" role="alert"></p>
+          <ol class="steps">
+            <li>
+              <div class="step-head">
+                <span class="step-num">1</span>
+                <h3>Choose a subject</h3>
+              </div>
+              <div id="subject-list" class="chips"></div>
+            </li>
+            <li id="step-tutor" class="hidden">
+              <div class="step-head">
+                <span class="step-num">2</span>
+                <h3>Choose a tutor</h3>
+              </div>
+              <div id="tutor-list" class="choices"></div>
+            </li>
+            <li id="step-slot" class="hidden">
+              <div class="step-head">
+                <span class="step-num">3</span>
+                <h3>Pick a time</h3>
+              </div>
+              <div id="slot-list"></div>
+            </li>
+            <li id="step-confirm" class="hidden">
+              <p class="summary" id="summary"></p>
+              <button id="confirm-btn" class="btn" type="button">
+                Confirm booking
+              </button>
+            </li>
+          </ol>
+        </div>
+
+        <div class="panel">
+          <h2>My lessons</h2>
+          <div id="my-lessons" class="lessons"></div>
+        </div>
+      </div>
     </main>
+
     <script src="/static/script.js" defer></script>
-</body>
+    <script src="/static/student.js" defer></script>
+  </body>
 </html>

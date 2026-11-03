@@ -6,6 +6,7 @@ from sqlalchemy import text
 from schemas import RegisterIn
 from routes import router
 from pathlib import Path
+from booking import router as booking_router
 
 from contextlib import asynccontextmanager
 from urllib.parse import urlparse
@@ -70,3 +71,4 @@ async def security(request: Request, call_next):
 # so the dashboards can't be opened without logging in.
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 app.include_router(router)
+app.include_router(booking_router)

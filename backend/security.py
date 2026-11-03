@@ -70,9 +70,14 @@ def require_admin(user: dict = Depends(current_user)) -> dict:
         raise HTTPException(status_code=403, detail="Not allowed.")
     return user
 
+def require_role(role: str):
+    def dependency(user: dict = Depends(current_user)) -> dict:
+        if user["role"] != role:
+            raise HTTPException(status_code=403, detail="Not allowed.")
+        return user
+    return dependency
 
 # ---------- rate limiting (in memory, per server process) ----------
-
 class RateLimiter:
     def __init__(self, max_calls: int, window_seconds: int):
         self.max_calls = max_calls
