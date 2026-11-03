@@ -1,8 +1,8 @@
 from sqlalchemy import select
 
-from app.database import engine
-from app.models import users
-from .conftest import STUDENT, login, make_admin, register
+from backend.database import engine
+from backend.models import users
+from conftest import STUDENT, login, make_admin, register
 
 
 def test_register_and_password_is_hashed(client):
