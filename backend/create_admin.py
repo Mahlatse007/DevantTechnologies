@@ -6,9 +6,9 @@ import sys
 from sqlalchemy import insert
 from sqlalchemy.exc import IntegrityError
 
-from .database import engine, init_db
-from .models import users
-from .security import hash_password
+from database import engine, init_db
+from models import users
+from security import hash_password
 
 
 def main() -> None:

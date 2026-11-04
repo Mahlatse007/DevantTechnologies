@@ -102,6 +102,7 @@ def register(data: RegisterIn, request: Request):
     try:
         with engine.begin() as conn:
             conn.execute(insert(users).values(
+                #id=None,  # auto-increment  
                 first_name=data.first_name,
                 last_name=data.last_name,
                 email=data.email,

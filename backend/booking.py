@@ -6,9 +6,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 from sqlalchemy import delete, func, insert, select
 from sqlalchemy.exc import IntegrityError
 
-from .database import engine
-from .models import bookings, slots, subjects, tutor_subjects, users
-from .security import current_user, require_role
+from database import engine
+from models import bookings, slots, subjects, tutor_subjects, users
+from security import current_user, require_role
 
 router = APIRouter(prefix="/api")
 student_only = require_role("Student")
