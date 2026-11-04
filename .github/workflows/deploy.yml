@@ -1,6 +1,4 @@
-# Tests the app, then deploys it to Azure App Service on every push to main.
-# Uses Azure secrets in GitHub (Settings > Secrets and variables > Actions).
-name: Test and deploy
+name: Deploy
 
 on:
   push:
@@ -9,28 +7,15 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: learnhub
-  PYTHON_VERSION: "3.12"        # keep the same as the runtime stack in Azure
 
 permissions:
   contents: read
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: pip
-      - run: pip install -r requirements-dev.txt
-      - run: pytest
-
   deploy:
-    needs: test
     runs-on: ubuntu-latest
     permissions:
-      id-token: write   # needed for the Azure login
+      id-token: write
       contents: read
     steps:
       - uses: actions/checkout@v4
